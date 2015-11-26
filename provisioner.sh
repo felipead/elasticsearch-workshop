@@ -12,12 +12,8 @@ is_package_present() {
     fi
 }
 
-install_package_if_not_present() {
-    if is_package_present "$1" -eq 0; then
-        echo "Package $1 already installed"
-    else
-        sudo apt-get install -y "$1"
-    fi
+install_package() {
+    sudo apt-get install -y "$1"
 }
 
 install_java8() {
@@ -29,7 +25,7 @@ install_java8() {
         sudo apt-key adv --keyserver hkp://keyserver.ubuntu.com:80 --recv-keys EEA14886
         sudo apt-get -y update
         sudo echo oracle-java8-installer shared/accepted-oracle-license-v1-1 select true | tee /etc/oracle-java-8-licence-acceptance | /usr/bin/debconf-set-selections
-        install_package_if_not_present oracle-java8-installer
+        install_package oracle-java8-installer
     fi
 }
 
@@ -40,7 +36,7 @@ install_elasticsearch() {
         wget -qO - https://packages.elastic.co/GPG-KEY-elasticsearch | sudo apt-key add -
         echo "deb http://packages.elastic.co/elasticsearch/2.x/debian stable main" | sudo tee -a /etc/apt/sources.list.d/elasticsearch-2.x.list
         sudo apt-get -y update
-        install_package_if_not_present elasticsearch
+        install_package elasticsearch
         sudo update-rc.d elasticsearch defaults 95 10
         sudo service elasticsearch restart
     fi
@@ -49,4 +45,3 @@ install_elasticsearch() {
 sudo apt-get -y update
 install_java8
 install_elasticsearch
-
