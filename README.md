@@ -43,7 +43,7 @@ Environment Setup
     - Install curl:
         - If you have Homebrew: `brew install curl`
         - Or install Apple Developer Tools
-    - Install JDK 7 or 8: https://jdk8.java.net/download.html
+    - Install [JDK](https://jdk8.java.net/download.html) 7 or 8
 
 - Download [Elasticsearch](https://www.elastic.co/downloads/elasticsearch/) 2.x
 - Unzip it to a folder in your machine (ex: `~/elasticsearch-2.1.0`)
