@@ -4,6 +4,36 @@
 Environment Setup
 -----------------
 
+### Setup Using Docker
+
+- Requirements:
+    - Install [Docker](https://docs.docker.com/engine/installation/)
+
+- Run your container:
+    - `docker run -p 9200:9200 -p 9300:9300 gomex/elasticsearch`
+
+- Verify everything is working:
+    - If you use Mac and Windows with Toolbox:
+      - `curl 'http://192.168.99.100:9200/?pretty'`
+    - If you use GNU/Linux:
+      - `curl 'http://localhost:9200/?pretty'`
+    - It should print something like:
+
+```json
+{
+  "name" : "Starbolt",
+  "cluster_name" : "elasticsearch",
+  "version" : {
+    "number" : "2.1.0",
+    "build_hash" : "72cd1f1a3eee09505e036106146dc1949dc5dc87",
+    "build_timestamp" : "2015-11-18T22:40:03Z",
+    "build_snapshot" : false,
+    "lucene_version" : "5.3.1"
+  },
+  "tagline" : "You Know, for Search"
+}
+```
+
 ### Setup Using Vagrant
 
 - Requirements:
