@@ -10,7 +10,7 @@ Environment Setup
     - Install [Docker](https://docs.docker.com/engine/installation/)
 
 - Run your container:
-    - `docker run -p 9200:9200 -p 9300:9300 gomex/elasticsearch`
+    - `docker run -p 9200:9200 -p 9300:9300 gomex/elasticsearch-workshop`
 
 - Verify everything is working:
     - If you use Mac and Windows with Toolbox:
