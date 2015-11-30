@@ -1,0 +1,7 @@
+{
+  "query": {
+    "match": {
+      "last_name": "Smith"
+    }
+  }
+}
