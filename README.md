@@ -1,4 +1,4 @@
-`ELASTICSEARCH WORKSHOP`
+Elasticsearch Workshop
 ======================
 
 Environment Setup
