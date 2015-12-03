@@ -4,21 +4,28 @@
 Environment Setup
 -----------------
 
-### Setup Using Docker
+The first step is to download the repository to your machine. If you have [git](http://git-scm.com):
+
+  - `git clone https://github.com/felipead/elasticsearch-workshop`
+  - `cd elasticsearch-workshop`
+
+We have provided Vagrant and Docker environments, as well as manual setup instructions.
+
+### Setup Using Vagrant
 
 - Requirements:
-    - Install [Docker](https://docs.docker.com/engine/installation/)
+    - Install [Vagrant](https://www.vagrantup.com/downloads.html)
+    - Install [VirtualBox](https://www.virtualbox.org/wiki/Downloads)
 
-- Run your container:
-    - `docker run -p 9200:9200 -p 9300:9300 gomex/elasticsearch-workshop`
+- Initialize Vagrant (this will take a while):
+    - `vagrant up`
 
 - Verify everything is working:
-    - If you use Mac and Windows with Toolbox:
-      - `curl 'http://192.168.99.100:9200/?pretty'`
-    - If you use GNU/Linux:
-      - `curl 'http://localhost:9200/?pretty'`
+    - `vagrant ssh`
+    - You might need to wait a few seconds for Elasticsearch to finish booting
+    - `curl http://localhost:9200`
     - It should print something like:
-
+    
 ```json
 {
   "name" : "Starbolt",
@@ -34,24 +41,25 @@ Environment Setup
 }
 ```
 
-### Setup Using Vagrant
+### Setup Using Docker
 
 - Requirements:
-    - Install [Vagrant](https://www.vagrantup.com/downloads.html)
-    - Install [VirtualBox](https://www.virtualbox.org/wiki/Downloads)
+    - If you are on Linux:
+      - Install [Docker](https://docs.docker.com/engine/installation/)
+    - If you are on Windows or Mac:
+      - Install the [Docker Toolbox](https://www.docker.com/docker-toolbox)
+      - Install [VirtualBox](https://www.virtualbox.org/wiki/Downloads)
 
-- Download the repository:
-    - `git clone git@github.com:felipead/elasticsearch-workshop.git`
-    - `cd elasticsearch-workshop`
-
-- Initialize Vagrant (this will take a while):
-    - `vagrant up`
+- Run your container:
+    - `docker run -p 9200:9200 elasticsearch-workshop`
 
 - Verify everything is working:
-    - `vagrant ssh`
-    - `curl 'http://localhost:9200/?pretty'`
+    - If you use Mac or Windows with Toolbox:
+      - `curl http://192.168.99.100:9200`
+    - If you use GNU/Linux:
+      - `curl http://localhost:9200`
     - It should print something like:
-    
+
 ```json
 {
   "name" : "Starbolt",
@@ -72,7 +80,7 @@ Environment Setup
 - Requirements:
     - Install curl:
         - If you have Homebrew: `brew install curl`
-        - Or install Apple Developer Tools
+        - ...or install Apple Developer Tools
     - Install [JDK](https://jdk8.java.net/download.html) 7 or 8
 
 - Download [Elasticsearch](https://www.elastic.co/downloads/elasticsearch/) 2.x
@@ -80,9 +88,10 @@ Environment Setup
 
 - Start Elasticsearch:
     - `${ELASTICSEARCH_HOME}/bin/elasticsearch`
+    - You might need to wait a few seconds for Elasticsearch to finish booting
 
 - Verify everything is working:
-    - `curl 'http://localhost:9200/?pretty'`
+    - `curl http://localhost:9200`
     - It should print something like:
     
 ```json
