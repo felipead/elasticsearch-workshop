@@ -1,0 +1,13 @@
+{
+  "query": {
+    "filtered": {
+      "filter": {
+        "range": {
+          "date": {
+            "gte": "2014-09-20"
+          }
+        }
+      }
+    }
+  }
+}
