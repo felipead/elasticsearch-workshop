@@ -1,0 +1,9 @@
+{
+  "aggs" : {
+    "colors" : {
+      "terms" : {
+        "field" : "color"
+      }
+    }
+  }
+}

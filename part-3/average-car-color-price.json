@@ -1,0 +1,12 @@
+{
+  "aggs": {
+    "colors": {
+      "terms": { "field": "color" },
+      "aggs": {
+        "avg_price": {
+          "avg": { "field": "price" }
+        }
+      }
+    }
+  }
+}
