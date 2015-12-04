@@ -51,7 +51,7 @@ We have provided Vagrant and Docker environments, as well as manual setup instru
       - Install [VirtualBox](https://www.virtualbox.org/wiki/Downloads)
 
 - Run your container:
-    - `docker run -p 9200:9200 elasticsearch-workshop`
+    - `docker run -p 9200:9200 elasticsearch:1.7`
 
 - Verify everything is working:
     - If you use Mac or Windows with Toolbox:
