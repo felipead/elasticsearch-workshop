@@ -1,0 +1,16 @@
+{
+  "query": {
+    "filtered": {
+      "query": {
+        "match": {
+          "tweet": "elasticsearch" 
+        }
+      },
+      "filter": {
+        "term": {
+          "user_id": 1
+        }
+      }
+    }
+  }
+}
