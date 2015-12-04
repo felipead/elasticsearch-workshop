@@ -1,0 +1,15 @@
+{
+  "query": {
+    "bool": {
+      "must": { 
+        "match": { "tweet": "elasticsearch"} 
+      },
+      "must_not": { 
+        "match": { "name": "mary" } 
+      },
+      "should": { 
+        "match": { "tweet": "full text" } 
+      }
+    }
+  }
+}
