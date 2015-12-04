@@ -1,0 +1,11 @@
+{
+  "aggs": {
+    "sales": {
+      "date_histogram": {
+        "field": "sold",
+        "interval": "month",
+        "format": "yyyy-MM-dd"
+      }
+    }
+  }
+}
