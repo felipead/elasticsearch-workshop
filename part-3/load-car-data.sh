@@ -1,6 +1,9 @@
 #!/bin/bash
 
-curl -X POST 'http://localhost:9200/cars/transactions/_bulk?pretty' -d'
+# export HOST=localhost  # for vagrant or local installs
+export HOST=192.168.99.100  # for docker users
+
+curl -X POST "http://$HOST:9200/cars/transactions/_bulk?pretty" -d'
 { "index": {}}
 { "price" : 10000, "color" : "red", "make" : "honda", "sold" : "2014-10-28" }
 { "index": {}}
