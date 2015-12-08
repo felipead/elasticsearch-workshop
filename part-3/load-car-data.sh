@@ -1,7 +1,7 @@
 #!/bin/bash
 
-# export HOST=localhost  # for vagrant or local installs
-export HOST=192.168.99.100  # for docker users
+export HOST=localhost  # for Vagrant or local installs
+# export HOST=192.168.99.100  # for Docker
 
 curl -X POST "http://$HOST:9200/cars/transactions/_bulk?pretty" -d'
 { "index": {}}
