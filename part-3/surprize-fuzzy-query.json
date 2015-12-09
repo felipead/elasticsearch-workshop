@@ -1,0 +1,10 @@
+{
+  "query": {
+    "match": {
+      "text": {
+        "query": "surprize",
+        "fuzziness": "1"
+      }
+    }
+  }
+}
