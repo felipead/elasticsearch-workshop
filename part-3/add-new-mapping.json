@@ -1,0 +1,9 @@
+{
+  "properties": {
+    "description": {
+      "type": "string",
+      "index": "analyzed",
+      "analyzer": "english"
+    }
+  }
+}
