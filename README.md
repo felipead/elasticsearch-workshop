@@ -1,6 +1,17 @@
 Elasticsearch Workshop
 ======================
 
+A broad and very hands-on Elasticsearch overview in ~4 hours. You're going to learn the core fundamentals of Elasticsearch and also get a glimpse on important *Information Retrieval* and *Distributed Systems* concepts.
+
+You can see the workshop slides at http://speakerdeck.com/felipead/elasticsearch-workshop
+
+What's covered:
+
+- Part 1: Core Concepts 
+- Part 2: Search & Analytics 
+- Part 3: Dealing with Human Language 
+- Part 4: Data Modeling
+
 Environment Setup
 -----------------
 
@@ -9,9 +20,9 @@ The first step is to download the repository to your machine. If you have [git](
   - `git clone https://github.com/felipead/elasticsearch-workshop`
   - `cd elasticsearch-workshop`
 
-We have provided Vagrant and Docker environments, as well as manual setup instructions.
+We have provided Vagrant and Docker environments, as well as manual setup instructions. Choose whatever setup is easier for you.
 
-### Setup Using Vagrant
+### Option 1: Using Vagrant
 
 - Requirements:
     - Install [Vagrant](https://www.vagrantup.com/downloads.html)
@@ -41,7 +52,7 @@ We have provided Vagrant and Docker environments, as well as manual setup instru
 }
 ```
 
-### Setup Using Docker
+### Option 2: Using Docker
 
 - Requirements:
     - If you are on Linux:
@@ -75,7 +86,7 @@ We have provided Vagrant and Docker environments, as well as manual setup instru
 }
 ```
 
-### Manual Setup
+### Option 3: Manual Setup
 
 - Requirements:
     - Install curl:
