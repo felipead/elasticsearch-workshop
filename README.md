@@ -85,8 +85,13 @@ We have provided Vagrant and Docker environments, as well as manual setup instru
   "tagline" : "You Know, for Search"
 }
 ```
+### Option 3: *Fedora / CentOS only* 
+- Install elasticsearch:
+  - `sudo dnf install -y elasticsearch`
+- Run it:
+  - `sudo systemctl start elasticsearch`
 
-### Option 3: Manual Setup
+### Option 4: Manual Setup
 
 - Requirements:
     - Install curl:
